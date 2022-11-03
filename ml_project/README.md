@@ -1,7 +1,6 @@
 Heart disease detection ML project
-`Author`: Kirill Lyahnovich
 ==============================
-
+`Author`: Kirill Lyahnovich
 Installation: 
 ~~~
 python -m venv .venv
