@@ -13,12 +13,12 @@ Usage:
 
 Run Train and save model
 ~~~
-python ml\run_pipeline.py configs/train/fast_config.yaml
+python ml\run_pipeline.py configs\train\fast_config.yaml
 ~~~
 
 Run Predict
 ~~~
-python ml\run_pipeline.py configs/predict/predict_config.yml
+python ml\predict.py configs\predict\predict_config.yml
 ~~~
 
 Run Test:
