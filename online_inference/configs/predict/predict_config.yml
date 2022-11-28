@@ -1,0 +1,4 @@
+    input_data_path: "data/raw/heart_cleveland_upload.csv"
+    output_data_path: "data/predictions/predictions.csv"
+    saved_model_path: "saved_models/fast_tuned_model.pkl"
+    target_column_name: "condition"
