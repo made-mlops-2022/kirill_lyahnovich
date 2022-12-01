@@ -4,7 +4,7 @@ from api.API import API
 from api.models import HealthInfo
 from ml.schemes.inference_config import load_inference_config
 
-INFERENCE_CONFIGS_PATH = './configs/inference/inference_configs.yml'
+INFERENCE_CONFIGS_PATH = '/configs/inference/inference_configs.yml'
 
 inference_params = load_inference_config(INFERENCE_CONFIGS_PATH)
 app = API(inference_params)
@@ -12,7 +12,7 @@ app = API(inference_params)
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "available endpoints: GET /health and POST /api/predict"}
 
 
 @app.get("/health")
@@ -24,9 +24,7 @@ async def root():
 
 @app.post("/api/predict")
 async def predict(health: HealthInfo):
-    print(health)
     response = app.inferencer.predict(health)
-    print(response)
     return response
 
 # @click.command(name="start_service")
