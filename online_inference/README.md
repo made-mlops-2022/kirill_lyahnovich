@@ -51,5 +51,7 @@ I had success. And started looking for more ways to reduce the size of image.
 That lead me to use `pip install` with `--no-cache-dir`. 
 And of course, I've installed only libs from `requirements.txt`
 
+As a result I've got image of size ~500mb. I think that's ok for such a service
+
 
 
