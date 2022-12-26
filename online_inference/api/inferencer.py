@@ -1,10 +1,12 @@
 from ml.models.serializing import load_model
 from ml.schemes.inference_config import InferenceParams
 from .models import HealthInfo
+import time
 
 
 class Inferencer:
     def __init__(self, inference_config: InferenceParams):
+        time.sleep(20)
         self.model = load_model(inference_config)
         self.target_column_name = inference_config.target_column_name
 
