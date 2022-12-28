@@ -1,0 +1,1 @@
+docker build -t klyahnovich/inference_container:v1 .

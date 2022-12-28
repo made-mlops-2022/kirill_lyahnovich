@@ -1,0 +1,23 @@
+input_data_path: "data/raw/heart_cleveland_upload.csv"
+output_model_path: "saved_models/fast_tuned_model.pkl"
+target_column: "condition"
+split_test_size: 0.25
+split_stratification: True
+randomized_search_iters: 2
+cv_n_folds: 3
+random_seed: 42
+tuning_grid:
+  RandomForestClassifier:
+    max_depth: [ 2, 3 ]
+    n_estimators: [ 50 ]
+    bootstrap: [ True ]
+    criterion: [ "entropy" ]
+  SVC:
+    C: [ 1, 2]
+    tol: [ 1e-2]
+    kernel: [ "linear", "rbf", "sigmoid" ]
+    shrinking: [ True]
+  AdaBoostClassifier:
+    n_estimators: [ 50]
+    algorithm: [ "SAMME" ]
+    learning_rate: [ 0.8, 1.2 ]
